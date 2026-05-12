@@ -16,7 +16,13 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--cream);color:var(--ink);font-family:'Sora',sans-serif;line-height:1.8;}
 .hi{font-family:'Noto Sans Devanagari',sans-serif;}
-.en{display:none;}span.en{display:none;}span.hi{display:inline;}a.en{display:none;}a.hi{display:inline;}
+/* Language defaults — Hindi shown, English hidden */
+.hi{display:block;}
+.en{display:none;}
+span.hi{display:inline;}
+span.en{display:none;}
+a.hi{display:inline;}
+a.en{display:none;}
 .lang-bar{background:var(--forest);padding:8px 5%;display:flex;justify-content:flex-end;gap:8px;align-items:center;position:sticky;top:0;z-index:200;}
 .lang-btn{padding:5px 16px;border-radius:20px;border:1.5px solid rgba(255,255,255,0.3);background:transparent;color:rgba(255,255,255,0.7);font-size:12px;font-family:'Sora',sans-serif;cursor:pointer;transition:all 0.2s;}
 .lang-btn.active{background:var(--gold);color:var(--forest);border-color:var(--gold);font-weight:600;}
@@ -239,7 +245,23 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 </footer>
 <script>
 function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.toLowerCase().startsWith('hi')?'hi':'en';}
-function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;if(lang==='hi'){document.querySelectorAll('.hi').forEach(el=>el.style.display='');document.querySelectorAll('.en').forEach(el=>el.style.display='none');}else{document.querySelectorAll('.hi').forEach(el=>el.style.display='none');document.querySelectorAll('.en').forEach(el=>el.style.display='');}document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
+function setLang(lang){
+  localStorage.setItem('sb-lang',lang);
+  document.documentElement.lang=lang;
+  if(lang==='hi'){
+    document.querySelectorAll('.hi').forEach(el=>{
+      el.style.display = el.tagName==='SPAN'||el.tagName==='A' ? 'inline' : 'block';
+    });
+    document.querySelectorAll('.en').forEach(el=>el.style.display='none');
+  } else {
+    document.querySelectorAll('.hi').forEach(el=>el.style.display='none');
+    document.querySelectorAll('.en').forEach(el=>{
+      el.style.display = el.tagName==='SPAN'||el.tagName==='A' ? 'inline' : 'block';
+    });
+  }
+  document.getElementById('btn-hi').classList.toggle('active',lang==='hi');
+  document.getElementById('btn-en').classList.toggle('active',lang==='en');
+}
 document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
 </script>
 </body></html>
