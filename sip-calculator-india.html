@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hi"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SIP Calculator India — Monthly Investment Returns Calculator Hindi | SmartBachao</title>
+<meta name="description" content="SIP Calculator India — Monthly Investment Returns Calculator Hindi — SmartBachao free calculator India. Hindi English.">
+<link rel="canonical" href="https://smartbachao.com/sip-calculator-india.html">
+<link rel="alternate" hreflang="hi" href="https://smartbachao.com/sip-calculator-india.html"/>
+<link rel="alternate" hreflang="en" href="https://smartbachao.com/sip-calculator-india.html"/>
+<link rel="alternate" hreflang="x-default" href="https://smartbachao.com/sip-calculator-india.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05JN2S9F7J');</script>
+<style>
+:root{--forest:#1a4731;--forest-mid:#2d6a4f;--forest-light:#40916c;--cream:#fefdf8;--warm:#f8f4e8;--gold:#d4a017;--gold-light:#f0c040;--ink:#1c1c1e;--ink-mid:#3a3a3c;--muted:#6e6e73;--card:#ffffff;--border:rgba(26,71,49,0.12);--shadow:0 4px 20px rgba(26,71,49,0.08);--red:#dc2626;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--cream);color:var(--ink);font-family:'Sora',sans-serif;line-height:1.8;}
+.hi{font-family:'Noto Sans Devanagari',sans-serif;}.en{display:none;}
+span.en{display:none;}span.hi{display:inline;}a.en{display:none;}a.hi{display:inline;}
+.lang-bar{background:var(--forest);padding:8px 5%;display:flex;justify-content:flex-end;gap:8px;align-items:center;position:sticky;top:0;z-index:200;}
+.lang-btn{padding:5px 16px;border-radius:20px;border:1.5px solid rgba(255,255,255,0.3);background:transparent;color:rgba(255,255,255,0.7);font-size:12px;font-family:'Sora',sans-serif;cursor:pointer;transition:all 0.2s;}
+.lang-btn.active{background:var(--gold);color:var(--forest);border-color:var(--gold);font-weight:600;}
+.lang-label{color:rgba(255,255,255,0.5);font-size:11px;margin-right:4px;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;background:var(--cream);border-bottom:1px solid var(--border);}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:36px;height:36px;background:var(--forest);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text{font-size:1.3rem;font-weight:800;color:var(--forest);}.logo-text span{color:var(--gold);}
+.nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;}
+.breaking-bar{background:var(--red);color:white;padding:8px 5%;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;}
+.page-hero{background:linear-gradient(135deg,#fff1f0,#fff8ee);padding:2.5rem 5%;border-bottom:1px solid var(--border);}
+.breadcrumb{font-size:12px;color:var(--muted);margin-bottom:0.8rem;}.breadcrumb a{color:var(--forest);text-decoration:none;}
+.page-hero h1{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:800;line-height:1.25;margin-bottom:0.8rem;}
+.page-hero p{color:var(--muted);max-width:650px;line-height:1.8;font-size:0.95rem;}
+.last-updated{margin-top:0.6rem;display:flex;gap:8px;flex-wrap:wrap;}
+.date-badge{font-size:11px;background:rgba(26,71,49,0.08);color:#2d6a4f;padding:3px 10px;border-radius:20px;font-weight:600;border:1px solid rgba(26,71,49,0.15);}
+.main{max-width:860px;margin:0 auto;padding:2.5rem 5%;}
+h2{font-size:1.2rem;font-weight:700;margin:2rem 0 0.7rem;color:var(--forest);}
+h3{font-size:1rem;font-weight:600;margin:1.2rem 0 0.4rem;color:var(--ink);}
+p{line-height:1.85;font-size:0.95rem;color:var(--ink-mid);margin-bottom:0.9rem;}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--forest-light);margin:2rem 0 0.6rem;display:flex;align-items:center;gap:6px;}
+.sec-label::before{content:'';width:18px;height:2px;background:var(--forest-light);}
+.rate-box{background:linear-gradient(135deg,var(--forest),var(--forest-mid));border-radius:16px;padding:2rem;margin:1.5rem 0;color:white;text-align:center;}
+.rate-main{font-size:3rem;font-weight:800;color:var(--gold-light);margin:0.5rem 0;}
+.rate-label{font-size:0.9rem;color:rgba(255,255,255,0.8);}
+.rate-note{font-size:0.78rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;}
+.converter-box{background:var(--warm);border:1px solid var(--border);border-radius:14px;padding:1.8rem;margin:1.5rem 0;}
+.converter-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:end;margin:1rem 0;}
+.conv-field label{font-size:12px;font-weight:600;color:var(--forest);display:block;margin-bottom:4px;}
+.conv-field input{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'Sora',sans-serif;font-size:1rem;font-weight:600;background:white;outline:none;}
+.conv-arrow{font-size:1.5rem;color:var(--forest);text-align:center;padding-bottom:8px;}
+.conv-btn{background:var(--forest);color:white;padding:10px 20px;border-radius:8px;border:none;font-family:'Sora',sans-serif;font-weight:600;cursor:pointer;margin-top:8px;}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin:1.2rem 0;}
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center;box-shadow:var(--shadow);}
+.info-icon{font-size:1.6rem;margin-bottom:6px;}
+.info-title{font-size:0.85rem;font-weight:600;margin-bottom:4px;color:var(--forest);display:block;}
+.info-desc{font-size:0.78rem;color:var(--muted);line-height:1.5;display:block;}
+.compare-table{width:100%;border-collapse:collapse;margin:1.2rem 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+.compare-table th{background:var(--forest);color:white;padding:11px 14px;text-align:left;font-size:0.85rem;font-weight:600;}
+.compare-table td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--ink-mid);}
+.compare-table tr:nth-child(even) td{background:var(--warm);}
+.compare-table tr:last-child td{border-bottom:none;}
+.tip-box{background:rgba(26,71,49,0.06);border-left:4px solid var(--forest);border-radius:0 10px 10px 0;padding:1rem 1.2rem;margin:1.2rem 0;}
+.tip-box p{margin:0;font-size:0.9rem;}
+.context-box{background:#FFFBEB;border:1px solid #FCD34D;border-radius:12px;padding:1.2rem 1.5rem;margin:1.2rem 0;}
+.context-box p{margin:0;font-size:0.9rem;color:#78350F;}
+.steps{display:flex;flex-direction:column;gap:0.9rem;margin:1.2rem 0;}
+.step{background:var(--card);border-radius:12px;padding:1.2rem 1.4rem;border:1px solid var(--border);display:flex;gap:1rem;align-items:flex-start;}
+.step-num{background:var(--forest);color:white;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;font-weight:700;flex-shrink:0;}
+.step-title{font-size:0.95rem;font-weight:700;margin-bottom:4px;color:var(--ink);display:block;}
+.step-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;display:block;}
+.faq{margin:1.5rem 0;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{padding:0.9rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:0.9rem;gap:10px;}
+.faq-q:hover{color:var(--forest);}
+.faq-q span:last-child{color:var(--forest);font-size:1.1rem;flex-shrink:0;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s,padding 0.3s;font-size:0.88rem;color:var(--muted);line-height:1.8;}
+.faq-a.open{max-height:400px;padding-bottom:1rem;}
+.author-box{background:var(--warm);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;margin:2rem 0;display:flex;gap:12px;}
+.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-top:1.5rem;}
+.rel-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.1rem;text-decoration:none;color:var(--ink);transition:all 0.2s;display:block;}
+.rel-card:hover{border-color:var(--forest);transform:translateY(-1px);}
+.rel-icon{font-size:1.4rem;margin-bottom:6px;}
+.rel-title{font-size:0.85rem;font-weight:600;line-height:1.4;display:block;}
+footer{background:var(--forest);color:rgba(255,255,255,0.6);text-align:center;padding:2rem 5%;font-size:0.85rem;margin-top:3rem;}
+footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
+@media(max-width:600px){.converter-grid{grid-template-columns:1fr;}.conv-arrow{display:none;}.compare-table{font-size:0.8rem;}}
+
+.calc-hero{background:linear-gradient(135deg,var(--forest),var(--forest-mid));border-radius:16px;padding:2rem;margin:1.5rem 0;color:white;}
+.calc-hero h3{color:white;margin-bottom:1rem;font-size:1.1rem;}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-bottom:1rem;}
+.calc-field label{font-size:11px;color:rgba(255,255,255,0.75);display:block;margin-bottom:4px;}
+.calc-field input,.calc-field select{width:100%;padding:9px 12px;border-radius:8px;border:none;background:rgba(255,255,255,0.15);color:white;font-family:'Sora',sans-serif;font-size:0.9rem;outline:none;}
+.calc-field input::placeholder{color:rgba(255,255,255,0.5);}
+.calc-btn{background:var(--gold-light);color:var(--forest);padding:10px 22px;border-radius:8px;border:none;font-family:'Sora',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;margin-top:4px;}
+.calc-result{background:rgba(255,255,255,0.12);border-radius:10px;padding:1.2rem;margin-top:1rem;display:none;line-height:1.9;font-size:0.9rem;}
+.result-highlight{font-size:1.8rem;font-weight:800;color:var(--gold-light);display:block;margin:0.5rem 0;}
+</style>
+</head><body>
+<div class="lang-bar">
+  <span class="lang-label">भाषा / Language:</span>
+  <button class="lang-btn active" onclick="setLang('hi')" id="btn-hi">हिंदी</button>
+  <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+</div>
+<nav>
+  <a href="index.html" class="logo"><div class="logo-icon">💡</div><span class="logo-text">Smart<span>Bachao</span></span></a>
+  <a href="index.html" class="nav-back">← <span class="hi">होम</span><span class="en">Home</span></a>
+</nav>
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">SmartBachao</a> → <span class="hi">📈 SIP Calculator India — महंगाई को Beat करें</span><span class="en">📈 SIP Calculator India — Beat Inflation</span></div>
+  <h1 class="hi">📈 SIP Calculator India — महंगाई को Beat करें</h1>
+  <h1 class="en" style="display:none">📈 SIP Calculator India — Beat Inflation</h1>
+  <p class="hi">Monthly SIP से कितना पैसा बनेगा? Free calculator से जानें। महंगाई को beat करने का सबसे smart तरीका।</p>
+  <p class="en" style="display:none">How much money will monthly SIP make? Find out with free calculator. The smartest way to beat inflation.</p>
+  <div class="last-updated">
+    <span class="date-badge">🗓 Last Updated: May 2026</span>
+    <span class="date-badge">✍️ SmartBachao Editorial Team</span>
+  </div>
+</div>
+<div class="main">
+
+<div class="calc-hero">
+  <h3 class="hi">📈 SIP Calculator — अपना Future Wealth जानें</h3>
+  <h3 class="en" style="display:none">📈 SIP Calculator — Know Your Future Wealth</h3>
+  <div class="calc-grid">
+    <div class="calc-field">
+      <label class="hi">Monthly SIP (₹)</label>
+      <label class="en" style="display:none">Monthly SIP (₹)</label>
+      <input type="number" id="sip-amount" value="5000" min="500">
+    </div>
+    <div class="calc-field">
+      <label class="hi">Expected Return (%/year)</label>
+      <label class="en" style="display:none">Expected Return (%/year)</label>
+      <input type="number" id="sip-rate" value="12" min="1" max="30">
+    </div>
+    <div class="calc-field">
+      <label class="hi">Investment Period (Years)</label>
+      <label class="en" style="display:none">Investment Period (Years)</label>
+      <input type="number" id="sip-years" value="10" min="1" max="40">
+    </div>
+  </div>
+  <button class="calc-btn" onclick="calcSIP()">
+    <span class="hi">Calculate करें →</span>
+    <span class="en" style="display:none">Calculate →</span>
+  </button>
+  <div class="calc-result" id="sip-result"></div>
+</div>
+
+<h2 class="hi">SIP क्या है — Simple Explanation</h2>
+<h2 class="en" style="display:none">What is SIP — Simple Explanation</h2>
+<p class="hi">SIP (Systematic Investment Plan) का मतलब है — हर महीने एक fixed amount mutual fund में invest करना। जैसे RD में हर महीने पैसे जमा करते हैं, वैसे ही SIP में। फर्क यह है कि SIP equity market में invest होती है जो long term में FD से बहुत ज्यादा return देती है।</p>
+<p class="en" style="display:none">SIP (Systematic Investment Plan) means investing a fixed amount in a mutual fund every month. Just like you deposit money monthly in RD, same with SIP. The difference is that SIP invests in the equity market which gives much higher returns than FD in the long run.</p>
+
+<div class="info-grid">
+  <div class="info-card"><div class="info-icon">📅</div><div class="info-title hi">Regular Investment</div><div class="info-desc hi">हर महीने fixed amount — market ऊपर हो या नीचे। Discipline बनती है।</div><div class="info-desc en" style="display:none">Fixed amount every month — whether market is up or down. Builds discipline.</div></div>
+  <div class="info-card"><div class="info-icon">💹</div><div class="info-title hi">Rupee Cost Averaging</div><div class="info-desc hi">Market down होने पर ज्यादा units मिलती हैं। Long term में average cost कम होती है।</div><div class="info-desc en" style="display:none">More units when market is down. Average cost is lower in the long run.</div></div>
+  <div class="info-card"><div class="info-icon">🔄</div><div class="info-title">Compounding</div><div class="info-desc hi">Returns पर भी returns मिलते हैं। जितना लंबे समय तक — उतना ज्यादा benefit।</div><div class="info-desc en" style="display:none">Returns earn returns too. The longer the period — the greater the benefit.</div></div>
+  <div class="info-card"><div class="info-icon">💰</div><div class="info-title hi">₹500 से शुरू</div><div class="info-desc hi">Minimum ₹500/month से SIP शुरू कर सकते हैं। Groww, Zerodha, Paytm पर free।</div><div class="info-desc en" style="display:none">Can start SIP with minimum ₹500/month. Free on Groww, Zerodha, Paytm.</div></div>
+</div>
+
+<h2 class="hi">Compounding का Magic — Examples</h2>
+<h2 class="en" style="display:none">Magic of Compounding — Examples</h2>
+<table class="compare-table">
+  <tr><th class="hi">Monthly SIP</th><th class="en" style="display:none">Monthly SIP</th><th class="hi">10 साल बाद (12%)</th><th class="en" style="display:none">After 10 years (12%)</th><th class="hi">20 साल बाद (12%)</th><th class="en" style="display:none">After 20 years (12%)</th><th class="hi">Invested</th><th class="en" style="display:none">Invested</th></tr>
+  <tr><td>₹500</td><td>~₹1.16 lakh</td><td>~₹4.99 lakh</td><td>₹1.2 lakh (10yr)</td></tr>
+  <tr><td>₹1,000</td><td>~₹2.32 lakh</td><td>~₹9.99 lakh</td><td>₹2.4 lakh (10yr)</td></tr>
+  <tr><td>₹5,000</td><td>~₹11.6 lakh</td><td>~₹49.9 lakh</td><td>₹12 lakh (10yr)</td></tr>
+  <tr><td>₹10,000</td><td>~₹23.2 lakh</td><td>~₹99.9 lakh</td><td>₹24 lakh (10yr)</td></tr>
+</table>
+<p style="font-size:0.8rem;color:var(--muted);font-style:italic;" class="hi">नोट: 12% assumed return। Actual mutual fund returns vary। Past performance future returns की guarantee नहीं है।</p>
+<p style="font-size:0.8rem;color:var(--muted);font-style:italic;" class="en" style="display:none">Note: 12% assumed return. Actual mutual fund returns vary. Past performance doesn't guarantee future returns.</p>
+
+<h2 class="hi">SIP कैसे शुरू करें — Step by Step</h2>
+<h2 class="en" style="display:none">How to Start SIP — Step by Step</h2>
+<div class="steps">
+  <div class="step"><div class="step-num">1</div><div>
+    <span class="step-title hi">Platform choose करें</span>
+    <span class="step-title en" style="display:none">Choose Platform</span>
+    <span class="step-desc hi">Groww, Zerodha Coin, Paytm Money, ETMONEY — सब free हैं। Groww beginners के लिए easiest है।</span>
+    <span class="step-desc en" style="display:none">Groww, Zerodha Coin, Paytm Money, ETMONEY — all are free. Groww is easiest for beginners.</span>
+  </div></div>
+  <div class="step"><div class="step-num">2</div><div>
+    <span class="step-title hi">KYC complete करें</span>
+    <span class="step-title en" style="display:none">Complete KYC</span>
+    <span class="step-desc hi">Aadhaar + PAN + Bank account। 10-15 minutes में online KYC हो जाती है।</span>
+    <span class="step-desc en" style="display:none">Aadhaar + PAN + Bank account. Online KYC done in 10-15 minutes.</span>
+  </div></div>
+  <div class="step"><div class="step-num">3</div><div>
+    <span class="step-title hi">Fund select करें</span>
+    <span class="step-title en" style="display:none">Select Fund</span>
+    <span class="step-desc hi">Beginners के लिए: Nifty 50 Index Fund — low cost, diversified, simple। या Large Cap fund। Risk tolerance के हिसाब से choose करें।</span>
+    <span class="step-desc en" style="display:none">For beginners: Nifty 50 Index Fund — low cost, diversified, simple. Or Large Cap fund. Choose based on risk tolerance.</span>
+  </div></div>
+  <div class="step"><div class="step-num">4</div><div>
+    <span class="step-title hi">Auto-debit setup करें</span>
+    <span class="step-title en" style="display:none">Set Up Auto-debit</span>
+    <span class="step-desc hi">Monthly SIP date set करें। Bank से auto-debit authorize करें। इसके बाद automatically invest होता रहेगा — आपको कुछ नहीं करना।</span>
+    <span class="step-desc en" style="display:none">Set monthly SIP date. Authorize auto-debit from bank. After this, investment happens automatically — you don't need to do anything.</span>
+  </div></div>
+</div>
+
+<h2 class="hi">SIP vs FD vs PPF — कौन सा बेहतर?</h2>
+<h2 class="en" style="display:none">SIP vs FD vs PPF — Which is Better?</h2>
+<table class="compare-table">
+  <tr><th>Factor</th><th>SIP (Equity MF)</th><th>FD</th><th>PPF</th></tr>
+  <tr><td class="hi">Expected Return</td><td class="en" style="display:none">Expected Return</td><td>10-15%</td><td>6.5-7.5%</td><td>7.1%</td></tr>
+  <tr><td>Risk</td><td class="hi">Market risk</td><td class="en" style="display:none">Market risk</td><td class="hi">None</td><td class="en" style="display:none">None</td><td class="hi">None</td><td class="en" style="display:none">None</td></tr>
+  <tr><td class="hi">Liquidity</td><td class="en" style="display:none">Liquidity</td><td class="hi">High (T+2 days)</td><td class="en" style="display:none">High (T+2 days)</td><td class="hi">Medium (penalty)</td><td class="en" style="display:none">Medium (penalty)</td><td class="hi">Low (15 yr lock)</td><td class="en" style="display:none">Low (15 yr lock)</td></tr>
+  <tr><td>Tax</td><td class="hi">10% LTCG (above ₹1L)</td><td class="en" style="display:none">10% LTCG (above ₹1L)</td><td class="hi">Income tax slab</td><td class="en" style="display:none">Income tax slab</td><td class="hi">Tax free</td><td class="en" style="display:none">Tax free</td></tr>
+  <tr><td class="hi">Minimum</td><td class="en" style="display:none">Minimum</td><td>₹500/month</td><td>₹1,000</td><td>₹500/year</td></tr>
+</table>
+
+<div class="tip-box">
+  <p class="hi"><strong>SmartBachao की सलाह:</strong> तीनों को mix करें। Emergency fund → Savings/FD। Tax saving + safe return → PPF। Long-term wealth building → SIP। यह combination inflation को beat करता है और risk भी manage करता है।</p>
+  <p class="en" style="display:none"><strong>SmartBachao's advice:</strong> Mix all three. Emergency fund → Savings/FD. Tax saving + safe return → PPF. Long-term wealth building → SIP. This combination beats inflation while managing risk.</p>
+</div>
+
+<div class="faq">
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="hi">क्या SIP safe है?</span><span class="en" style="display:none">Is SIP safe?</span><span>+</span></div>
+    <div class="faq-a"><p class="hi">SIP mutual funds में invest होती है जो SEBI regulated हैं। Short term में market fluctuation होती है — आपका amount कम दिख सकता है। लेकिन historically Nifty 50 ने 15+ साल में कभी negative return नहीं दिया। Long term के लिए SIP safe और smart है।</p><p class="en" style="display:none">SIP invests in mutual funds which are SEBI regulated. Short-term market fluctuations can make your amount appear lower. But historically Nifty 50 has never given negative returns over 15+ years. For the long term, SIP is safe and smart.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)"><span class="hi">Market crash होने पर SIP बंद करें?</span><span class="en" style="display:none">Should I stop SIP when market crashes?</span><span>+</span></div>
+    <div class="faq-a"><p class="hi">नहीं — बल्कि market crash में SIP और valuable होती है। जब market नीचे होता है तो same amount में ज्यादा units मिलती हैं। जब market recover करता है — आपको ज्यादा profit मिलता है। Market crash में SIP बंद करना सबसे common और costly mistake है।</p><p class="en" style="display:none">No — in fact SIP becomes more valuable during a market crash. When the market is down, you get more units for the same amount. When the market recovers — you get more profit. Stopping SIP during a market crash is the most common and costly mistake.</p></div>
+  </div>
+</div>
+
+<div class="author-box">
+  <div style="font-size:1.8rem;flex-shrink:0;">✍️</div>
+  <div>
+    <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin:0;" class="hi">यह guide <strong style="color:var(--ink);">SmartBachao Editorial Team</strong> द्वारा तैयार की गई है। Sources: SEBI, Groww, PolicyBazaar, AMFI। Educational information only — financial advice नहीं।</p>
+    <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin:0;" class="en" style="display:none">Prepared by <strong style="color:var(--ink);">SmartBachao Editorial Team</strong>. Sources: SEBI, Groww, PolicyBazaar, AMFI. Educational information only — not financial advice.</p>
+  </div>
+</div>
+
+<div class="related">
+  <a href="ppf-calculator-india.html" class="rel-card"><div class="rel-icon">🏦</div><div class="rel-title hi">PPF Calculator</div><div class="rel-title en" style="display:none">PPF Calculator</div></a>
+  <a href="fd-calculator-india.html" class="rel-card"><div class="rel-icon">💳</div><div class="rel-title hi">FD Calculator</div><div class="rel-title en" style="display:none">FD Calculator</div></a>
+  <a href="gold-vs-fd-vs-stocks-inflation.html" class="rel-card"><div class="rel-icon">🥇</div><div class="rel-title hi">Gold vs FD vs Stocks</div><div class="rel-title en" style="display:none">Gold vs FD vs Stocks</div></a>
+  <a href="india-inflation-rate-2026.html" class="rel-card"><div class="rel-icon">📊</div><div class="rel-title hi">Inflation Rate</div><div class="rel-title en" style="display:none">Inflation Rate</div></a>
+</div>
+
+<script>
+function calcSIP(){{
+  const p=parseFloat(document.getElementById('sip-amount').value)||5000;
+  const r=parseFloat(document.getElementById('sip-rate').value)/100/12||0.01;
+  const n=parseFloat(document.getElementById('sip-years').value)*12||120;
+  const fv=p*((Math.pow(1+r,n)-1)/r)*(1+r);
+  const invested=p*n;
+  const gains=fv-invested;
+  const lang=localStorage.getItem('sb-lang')||'hi';
+  const r2=document.getElementById('sip-result');
+  r2.style.display='block';
+  const fmt=v=>v>=10000000?'₹'+(v/10000000).toFixed(2)+' Cr':v>=100000?'₹'+(v/100000).toFixed(2)+' Lakh':'₹'+Math.round(v).toLocaleString('en-IN');
+  if(lang==='hi'){{
+    r2.innerHTML=`<span class="result-highlight">${{fmt(fv)}}</span>
+    <strong>Total Corpus (उदाहरण)</strong><br>
+    💰 Invested: ${{fmt(invested)}}<br>
+    📈 Estimated Gains: ${{fmt(gains)}}<br>
+    🔄 Return Multiple: ${{(fv/invested).toFixed(1)}}x<br>
+    <small style="opacity:0.8;">यह उदाहरण है। Actual returns vary। Inflation और taxes adjust नहीं किए।</small>`;
+  }} else {{
+    r2.innerHTML=`<span class="result-highlight">${{fmt(fv)}}</span>
+    <strong>Total Corpus (Example)</strong><br>
+    💰 Invested: ${{fmt(invested)}}<br>
+    📈 Estimated Gains: ${{fmt(gains)}}<br>
+    🔄 Return Multiple: ${{(fv/invested).toFixed(1)}}x<br>
+    <small style="opacity:0.8;">This is an example. Actual returns vary. Inflation and taxes not adjusted.</small>`;
+  }}
+}}
+</script>
+</div>
+<footer>
+  <p><a href="index.html">SmartBachao</a> · <a href="about.html" class="hi">हमारे बारे में</a><a href="about.html" class="en" style="display:none">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="contact.html">Contact</a></p>
+  <p style="margin-top:8px;" class="hi">© 2026 SmartBachao.com — भारत का स्मार्ट बचत गाइड</p>
+  <p style="margin-top:8px;" class="en" style="display:none">© 2026 SmartBachao.com — India's Smart Savings Guide</p>
+</footer>
+<script>
+function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.toLowerCase().startsWith('hi')?'hi':'en';}
+function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;if(lang==='hi'){document.querySelectorAll('.hi').forEach(el=>{el.style.display=el.tagName==='SPAN'||el.tagName==='A'?'inline':'block';});document.querySelectorAll('.en').forEach(el=>el.style.display='none');}else{document.querySelectorAll('.hi').forEach(el=>el.style.display='none');document.querySelectorAll('.en').forEach(el=>{el.style.display=el.tagName==='SPAN'||el.tagName==='A'?'inline':'block';});}document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
+function toggleFaq(el){const a=el.nextElementSibling;const isOpen=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.faq-q span:last-child').forEach(x=>x.textContent='+');if(!isOpen){a.classList.add('open');el.querySelector('span:last-child').textContent='−';}}
+document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
+</script>
+</body></html>
