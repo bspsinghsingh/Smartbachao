@@ -49,9 +49,17 @@ nav { display:flex; justify-content:space-between; align-items:center; padding:1
 .logo-icon { width:36px; height:36px; background:var(--forest); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; }
 .logo-text { font-size:1.4rem; font-weight:800; color:var(--forest); letter-spacing:-0.5px; }
 .logo-text span { color:var(--gold); }
-.nav-links { display:flex; gap:1.5rem; list-style:none; }
-.nav-links a { text-decoration:none; color:var(--muted); font-size:0.85rem; font-weight:500; transition:color 0.2s; }
-.nav-links a:hover { color:var(--forest); }
+.nav-links { display:flex; gap:0.5rem; list-style:none; align-items:center; }
+.nav-links > li { position:relative; }
+.nav-links > li > a { text-decoration:none; color:var(--muted); font-size:0.85rem; font-weight:500; transition:color 0.2s; padding:6px 10px; border-radius:6px; display:flex; align-items:center; gap:4px; }
+.nav-links > li > a:hover { color:var(--forest); background:var(--warm); }
+.nav-links > li > a .arrow { font-size:0.6rem; transition:transform 0.2s; }
+.nav-links > li:hover > a .arrow { transform:rotate(180deg); }
+.dropdown { display:none; position:absolute; top:100%; left:0; background:white; border:1px solid var(--border); border-radius:10px; box-shadow:0 8px 30px rgba(26,71,49,0.12); min-width:220px; padding:8px; z-index:500; }
+.nav-links > li:hover .dropdown { display:block; }
+.dropdown a { display:block; padding:8px 12px; text-decoration:none; color:var(--ink-mid); font-size:0.83rem; border-radius:6px; transition:all 0.15s; }
+.dropdown a:hover { background:var(--warm); color:var(--forest); }
+.dropdown-divider { height:1px; background:var(--border); margin:4px 0; }
 .nav-cta { background:var(--forest); color:white; padding:8px 20px; border-radius:8px; text-decoration:none; font-size:0.85rem; font-weight:600; transition:background 0.2s; }
 .nav-cta:hover { background:var(--forest-light); }
 
@@ -191,11 +199,50 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
     <span class="logo-text">Smart<span>Bachao</span></span>
   </a>
   <ul class="nav-links">
-    <li><a href="bijli-bill-kam-kare.html" class="hi">ऊर्जा</a><a href="bijli-bill-kam-kare.html" class="en" style="display:none">Energy</a></li>
-    <li><a href="cycle-buying-guide-india.html" class="hi">यातायात</a><a href="cycle-buying-guide-india.html" class="en" style="display:none">Transport</a></li>
-    <li><a href="ghar-mein-sabzi-kaise-ugaye.html" class="hi">खाना</a><a href="ghar-mein-sabzi-kaise-ugaye.html" class="en" style="display:none">Food</a></li>
-    <li><a href="mehngai-mein-paise-bachao.html" class="hi">पैसा</a><a href="mehngai-mein-paise-bachao.html" class="en" style="display:none">Money</a></li>
-    <li><a href="calculators.html" class="hi">कैलकुलेटर</a><a href="calculators.html" class="en" style="display:none">Calculators</a></li>
+    <li><a href="index.html"><span class="hi">🏠 होम</span><span class="en" style="display:none">🏠 Home</span></a></li>
+    <li>
+      <a href="bijli-bill-kam-kare.html"><span class="hi">ऊर्जा</span><span class="en" style="display:none">Energy</span> <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="bijli-bill-kam-kare.html"><span class="hi">💡 बिजली बिल कम करें</span><span class="en" style="display:none">💡 Reduce Electricity Bill</span></a>
+        <a href="pm-surya-ghar-guide.html"><span class="hi">☀️ PM सूर्य घर योजना</span><span class="en" style="display:none">☀️ PM Surya Ghar Scheme</span></a>
+        <a href="best-induction-cooktop-india.html"><span class="hi">🍳 Best Induction Cooktop</span><span class="en" style="display:none">🍳 Best Induction Cooktop</span></a>
+        <a href="lpg-crisis-india-2026.html"><span class="hi">🔴 LPG Crisis Guide</span><span class="en" style="display:none">🔴 LPG Crisis Guide</span></a>
+        <a href="png-connection-guide.html"><span class="hi">🔗 PNG Connection Guide</span><span class="en" style="display:none">🔗 PNG Connection Guide</span></a>
+      </div>
+    </li>
+    <li>
+      <a href="cycle-buying-guide-india.html"><span class="hi">यातायात</span><span class="en" style="display:none">Transport</span> <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="cycle-buying-guide-india.html"><span class="hi">🚲 साइकिल खरीद गाइड</span><span class="en" style="display:none">🚲 Cycle Buying Guide</span></a>
+        <a href="electric-scooter-vs-petrol.html"><span class="hi">⚡ EV vs Petrol Scooter</span><span class="en" style="display:none">⚡ EV vs Petrol Scooter</span></a>
+        <a href="cng-conversion-guide.html"><span class="hi">🔄 CNG Conversion Guide</span><span class="en" style="display:none">🔄 CNG Conversion Guide</span></a>
+        <a href="ecycle-vs-cycle-india.html"><span class="hi">🔋 E-Cycle vs Cycle</span><span class="en" style="display:none">🔋 E-Cycle vs Cycle</span></a>
+        <a href="petrol-price-india-2026.html"><span class="hi">⛽ Petrol Price Guide</span><span class="en" style="display:none">⛽ Petrol Price Guide</span></a>
+        <a href="modi-fuel-conservation-tips.html"><span class="hi">🇮🇳 Modi Fuel Tips</span><span class="en" style="display:none">🇮🇳 Modi Fuel Tips</span></a>
+      </div>
+    </li>
+    <li>
+      <a href="ghar-mein-sabzi-kaise-ugaye.html"><span class="hi">खाना</span><span class="en" style="display:none">Food</span> <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="ghar-mein-sabzi-kaise-ugaye.html"><span class="hi">🌱 घर में सब्जी उगाएं</span><span class="en" style="display:none">🌱 Grow Vegetables at Home</span></a>
+        <a href="budget-meal-plan-india.html"><span class="hi">🍽️ Budget Meal Plan</span><span class="en" style="display:none">🍽️ Budget Meal Plan</span></a>
+        <a href="nano-urea-hindi-guide.html"><span class="hi">🌾 Nano Urea Guide</span><span class="en" style="display:none">🌾 Nano Urea Guide</span></a>
+      </div>
+    </li>
+    <li>
+      <a href="mehngai-mein-paise-bachao.html"><span class="hi">पैसा</span><span class="en" style="display:none">Money</span> <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="mehngai-mein-paise-bachao.html"><span class="hi">💰 महंगाई में बचत</span><span class="en" style="display:none">💰 Savings in Inflation</span></a>
+        <a href="gold-vs-fd-vs-stocks-inflation.html"><span class="hi">🥇 Gold vs FD vs Stocks</span><span class="en" style="display:none">🥇 Gold vs FD vs Stocks</span></a>
+        <a href="sip-calculator-india.html"><span class="hi">📈 SIP Calculator</span><span class="en" style="display:none">📈 SIP Calculator</span></a>
+        <a href="ppf-calculator-india.html"><span class="hi">🏦 PPF Calculator</span><span class="en" style="display:none">🏦 PPF Calculator</span></a>
+        <a href="fd-calculator-india.html"><span class="hi">💳 FD Calculator</span><span class="en" style="display:none">💳 FD Calculator</span></a>
+        <a href="dollar-rupee-rate-india-2026.html"><span class="hi">💵 Dollar vs Rupee</span><span class="en" style="display:none">💵 Dollar vs Rupee</span></a>
+        <a href="india-inflation-rate-2026.html"><span class="hi">📊 Inflation Rate</span><span class="en" style="display:none">📊 Inflation Rate</span></a>
+        <a href="iran-war-india-economy-impact.html"><span class="hi">🌍 Iran War Impact</span><span class="en" style="display:none">🌍 Iran War Impact</span></a>
+      </div>
+    </li>
+    <li><a href="calculators.html"><span class="hi">🧮 कैलकुलेटर</span><span class="en" style="display:none">🧮 Calculators</span></a></li>
   </ul>
   <a href="calculators.html" class="nav-cta hi">फ्री कैलकुलेटर →</a>
   <a href="calculators.html" class="nav-cta en" style="display:none">Free Calculators →</a>
@@ -479,6 +526,88 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
 </div>
 
 <!-- FOOTER -->
+<!-- Latest Articles Section -->
+<section style="padding:3rem 5%;background:var(--cream);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="sec-label hi" style="margin-bottom:1.2rem;">🆕 Latest Articles — नए गाइड</div>
+    <div class="sec-label en" style="display:none;margin-bottom:1.2rem;">🆕 Latest Articles</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;">
+
+      <a href="dollar-rupee-rate-india-2026.html" style="background:white;border:1px solid var(--border);border-radius:14px;padding:1.2rem;text-decoration:none;color:var(--ink);display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a4731'" onmouseout="this.style.borderColor='rgba(26,71,49,0.12)'">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1.4rem;">💵</span>
+          <span style="font-size:11px;background:#FEE2E2;color:#991B1B;padding:2px 8px;border-radius:20px;font-weight:700;">TRENDING</span>
+        </div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="hi">Dollar ₹96 — आम आदमी पर असर</div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="en" style="display:none">Dollar ₹96 — Impact on Common People</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="hi">Rupee record low — क्या करें?</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="en" style="display:none">Rupee at record low — what to do?</div>
+      </a>
+
+      <a href="india-inflation-rate-2026.html" style="background:white;border:1px solid var(--border);border-radius:14px;padding:1.2rem;text-decoration:none;color:var(--ink);display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a4731'" onmouseout="this.style.borderColor='rgba(26,71,49,0.12)'">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1.4rem;">📊</span>
+          <span style="font-size:11px;background:#FEE2E2;color:#991B1B;padding:2px 8px;border-radius:20px;font-weight:700;">100/100</span>
+        </div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="hi">India Inflation Rate 2026</div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="en" style="display:none">India Inflation Rate 2026</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="hi">महंगाई दर और आपकी savings पर असर</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="en" style="display:none">Inflation rate and impact on your savings</div>
+      </a>
+
+      <a href="sip-calculator-india.html" style="background:white;border:1px solid var(--border);border-radius:14px;padding:1.2rem;text-decoration:none;color:var(--ink);display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a4731'" onmouseout="this.style.borderColor='rgba(26,71,49,0.12)'">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1.4rem;">📈</span>
+          <span style="font-size:11px;background:#D1FAE5;color:#065F46;padding:2px 8px;border-radius:20px;font-weight:700;">CALCULATOR</span>
+        </div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="hi">SIP Calculator India</div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="en" style="display:none">SIP Calculator India</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="hi">₹500/month से करोड़पति कैसे बनें</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="en" style="display:none">How to build wealth from ₹500/month</div>
+      </a>
+
+      <a href="ppf-calculator-india.html" style="background:white;border:1px solid var(--border);border-radius:14px;padding:1.2rem;text-decoration:none;color:var(--ink);display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a4731'" onmouseout="this.style.borderColor='rgba(26,71,49,0.12)'">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1.4rem;">🏦</span>
+          <span style="font-size:11px;background:#D1FAE5;color:#065F46;padding:2px 8px;border-radius:20px;font-weight:700;">CALCULATOR</span>
+        </div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="hi">PPF Calculator — Tax Free Savings</div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="en" style="display:none">PPF Calculator — Tax Free Savings</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="hi">Government backed, 7.1% guaranteed</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="en" style="display:none">Government backed, 7.1% guaranteed</div>
+      </a>
+
+      <a href="petrol-price-india-2026.html" style="background:white;border:1px solid var(--border);border-radius:14px;padding:1.2rem;text-decoration:none;color:var(--ink);display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a4731'" onmouseout="this.style.borderColor='rgba(26,71,49,0.12)'">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1.4rem;">⛽</span>
+          <span style="font-size:11px;background:#FEE2E2;color:#991B1B;padding:2px 8px;border-radius:20px;font-weight:700;">TRENDING</span>
+        </div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="hi">Petrol Price India 2026</div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="en" style="display:none">Petrol Price India 2026</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="hi">आज का रेट और 10 बचत के तरीके</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="en" style="display:none">Today's rate and 10 saving tips</div>
+      </a>
+
+      <a href="fd-calculator-india.html" style="background:white;border:1px solid var(--border);border-radius:14px;padding:1.2rem;text-decoration:none;color:var(--ink);display:block;transition:all 0.2s;" onmouseover="this.style.borderColor='#1a4731'" onmouseout="this.style.borderColor='rgba(26,71,49,0.12)'">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1.4rem;">💳</span>
+          <span style="font-size:11px;background:#D1FAE5;color:#065F46;padding:2px 8px;border-radius:20px;font-weight:700;">CALCULATOR</span>
+        </div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="hi">FD Calculator India 2026</div>
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:4px;" class="en" style="display:none">FD Calculator India 2026</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="hi">Best FD rates + maturity calculator</div>
+        <div style="font-size:0.82rem;color:var(--muted);" class="en" style="display:none">Best FD rates + maturity calculator</div>
+      </a>
+
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a href="calculators.html" style="display:inline-block;background:var(--forest);color:white;padding:10px 24px;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:600;">
+        <span class="hi">सभी Calculators देखें →</span>
+        <span class="en" style="display:none">View All Calculators →</span>
+      </a>
+    </div>
+  </div>
+</section>
 <!-- Trust Section -->
 <section style="background:var(--warm);padding:2.5rem 5%;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div style="max-width:900px;margin:0 auto;">
