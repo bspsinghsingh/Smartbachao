@@ -398,7 +398,7 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 
 <script>
 // Language
-function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.startsWith('hi')?'hi':'en';}
+function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.toLowerCase().startsWith('hi')?'hi':'en';}
 function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;document.querySelectorAll('.hi').forEach(el=>el.style.display=lang==='hi'?'':'none');document.querySelectorAll('.en').forEach(el=>el.style.display=lang==='en'?'':'none');document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
 document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
 

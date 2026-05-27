@@ -344,7 +344,7 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 <footer><p><a href="index.html">SmartBachao</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="contact.html">Contact</a></p>
 <p style="margin-top:8px;">© 2026 SmartBachao.com</p></footer>
 <script>
-function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.startsWith('hi')?'hi':'en';}
+function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.toLowerCase().startsWith('hi')?'hi':'en';}
 function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;document.querySelectorAll('.hi').forEach(el=>el.style.display=lang==='hi'?'':'none');document.querySelectorAll('.en').forEach(el=>el.style.display=lang==='en'?'':'none');document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
 function toggleFaq(el){const a=el.nextElementSibling;const isOpen=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.faq-q span:last-child').forEach(x=>x.textContent='+');if(!isOpen){a.classList.add('open');el.querySelector('span:last-child').textContent='−';}}
 document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
