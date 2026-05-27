@@ -287,21 +287,123 @@ footer { background:var(--forest); color:rgba(255,255,255,0.7); padding:3rem 5% 
 </nav>
 
 <!-- CRISIS TICKER -->
-<div class="new-articles-bar">
-  <span class="new-articles-label">🆕 New</span>
-  <a href="lpg-crisis-india-2026.html" class="new-article-link">
-    <span class="hi">🍳 LPG Alternative Guide 2026</span>
-    <span class="en" style="display:none">🍳 LPG Alternative Guide 2026</span>
-  </a>
-  <a href="modi-fuel-conservation-tips.html" class="new-article-link">
-    <span class="hi">🇮🇳 Modi जी के Fuel Tips</span>
-    <span class="en" style="display:none">🇮🇳 Modi's Fuel Conservation Tips</span>
-  </a>
-  <a href="iran-war-india-economy-impact.html" class="new-article-link">
-    <span class="hi">🌍 Global Economy — India पर असर</span>
-    <span class="en" style="display:none">🌍 Global Economy — Impact on India</span>
-  </a>
+<!-- Auto-rotating New Articles Carousel -->
+<div style="background:var(--warm);padding:1.2rem 5%;border-top:3px solid var(--forest);border-bottom:2px solid var(--border);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.8rem;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="width:8px;height:8px;background:#dc2626;border-radius:50%;display:inline-block;animation:blink 1.5s infinite;"></span>
+        <span style="font-size:11px;font-weight:700;color:var(--forest);text-transform:uppercase;letter-spacing:0.1em;" class="hi">🆕 नए Guides</span>
+        <span style="font-size:11px;font-weight:700;color:var(--forest);text-transform:uppercase;letter-spacing:0.1em;" class="en" style="display:none">🆕 New Guides</span>
+      </div>
+      <div style="display:flex;gap:6px;">
+        <button id="c-prev" style="width:26px;height:26px;border-radius:50%;border:1px solid var(--border);background:white;cursor:pointer;font-size:14px;line-height:1;">‹</button>
+        <button id="c-next" style="width:26px;height:26px;border-radius:50%;border:1px solid var(--border);background:white;cursor:pointer;font-size:14px;line-height:1;">›</button>
+      </div>
+    </div>
+    <div style="overflow:hidden;">
+      <div id="c-track" style="display:flex;gap:12px;transition:transform 0.4s ease;will-change:transform;">
+        <a href="ac-vs-cooler-electricity-bill-calculator.html" class="c-card" style="min-width:190px;background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:0.8rem;text-decoration:none;color:var(--ink);flex-shrink:0;">
+          <div style="font-size:1.2rem;">❄️</div>
+          <div style="font-size:9px;background:#DBEAFE;color:#1D4ED8;padding:1px 6px;border-radius:8px;font-weight:700;display:inline-block;margin:3px 0;">HOT 🔥</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="hi">AC vs Cooler Calculator</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="en" style="display:none">AC vs Cooler Calculator</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="hi">Monthly cost जानें</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="en" style="display:none">Know monthly cost</div>
+        </a>
+        <a href="bijli-bill-kam-kare-summer.html" class="c-card" style="min-width:190px;background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:0.8rem;text-decoration:none;color:var(--ink);flex-shrink:0;">
+          <div style="font-size:1.2rem;">💡</div>
+          <div style="font-size:9px;background:#FEF3C7;color:#92400E;padding:1px 6px;border-radius:8px;font-weight:700;display:inline-block;margin:3px 0;">SUMMER ☀️</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="hi">Summer Bijli Bill Tips</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="en" style="display:none">Summer Electricity Tips</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="hi">15 proven tips</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="en" style="display:none">15 proven tips</div>
+        </a>
+        <a href="ac-temperature-saving-guide.html" class="c-card" style="min-width:190px;background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:0.8rem;text-decoration:none;color:var(--ink);flex-shrink:0;">
+          <div style="font-size:1.2rem;">🌡️</div>
+          <div style="font-size:9px;background:#D1FAE5;color:#065F46;padding:1px 6px;border-radius:8px;font-weight:700;display:inline-block;margin:3px 0;">BEE GUIDE</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="hi">AC 24°C vs 28°C Guide</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="en" style="display:none">AC 24°C vs 28°C Guide</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="hi">6% per degree saving</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="en" style="display:none">6% per degree saving</div>
+        </a>
+        <a href="dollar-rupee-rate-india-2026.html" class="c-card" style="min-width:190px;background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:0.8rem;text-decoration:none;color:var(--ink);flex-shrink:0;">
+          <div style="font-size:1.2rem;">💵</div>
+          <div style="font-size:9px;background:#FEE2E2;color:#991B1B;padding:1px 6px;border-radius:8px;font-weight:700;display:inline-block;margin:3px 0;">TRENDING</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="hi">Dollar vs Rupee Guide</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="en" style="display:none">Dollar vs Rupee Guide</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="hi">₹96 — impact जानें</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="en" style="display:none">₹96 — know the impact</div>
+        </a>
+        <a href="sip-calculator-india.html" class="c-card" style="min-width:190px;background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:0.8rem;text-decoration:none;color:var(--ink);flex-shrink:0;">
+          <div style="font-size:1.2rem;">📈</div>
+          <div style="font-size:9px;background:#EDE9FE;color:#5B21B6;padding:1px 6px;border-radius:8px;font-weight:700;display:inline-block;margin:3px 0;">CALCULATOR</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="hi">SIP Calculator</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="en" style="display:none">SIP Calculator</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="hi">₹500 से शुरू करें</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="en" style="display:none">Start from ₹500</div>
+        </a>
+        <a href="lpg-crisis-india-2026.html" class="c-card" style="min-width:190px;background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:0.8rem;text-decoration:none;color:var(--ink);flex-shrink:0;">
+          <div style="font-size:1.2rem;">🍳</div>
+          <div style="font-size:9px;background:#FEE2E2;color:#991B1B;padding:1px 6px;border-radius:8px;font-weight:700;display:inline-block;margin:3px 0;">TRENDING</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="hi">LPG Alternative Guide</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="en" style="display:none">LPG Alternative Guide</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="hi">Induction, PNG, Electric</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="en" style="display:none">Induction, PNG, Electric</div>
+        </a>
+        <a href="ppf-calculator-india.html" class="c-card" style="min-width:190px;background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:0.8rem;text-decoration:none;color:var(--ink);flex-shrink:0;">
+          <div style="font-size:1.2rem;">🏦</div>
+          <div style="font-size:9px;background:#EDE9FE;color:#5B21B6;padding:1px 6px;border-radius:8px;font-weight:700;display:inline-block;margin:3px 0;">CALCULATOR</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="hi">PPF Calculator</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="en" style="display:none">PPF Calculator</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="hi">Tax-free 7.1%</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="en" style="display:none">Tax-free 7.1%</div>
+        </a>
+        <a href="india-inflation-rate-2026.html" class="c-card" style="min-width:190px;background:var(--warm);border:1px solid var(--border);border-radius:10px;padding:0.8rem;text-decoration:none;color:var(--ink);flex-shrink:0;">
+          <div style="font-size:1.2rem;">📊</div>
+          <div style="font-size:9px;background:#FEE2E2;color:#991B1B;padding:1px 6px;border-radius:8px;font-weight:700;display:inline-block;margin:3px 0;">TRENDING</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="hi">India Inflation 2026</div>
+          <div style="font-size:0.8rem;font-weight:700;margin-top:2px;" class="en" style="display:none">India Inflation 2026</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="hi">CPI — क्या करें</div>
+          <div style="font-size:0.72rem;color:var(--muted);" class="en" style="display:none">CPI — what to do</div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
+<style>
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.2;}}
+.c-card:hover{border-color:var(--forest)!important;transform:translateY(-2px);box-shadow:0 4px 10px rgba(26,71,49,0.1);}
+</style>
+<script>
+(function(){
+  var track = document.getElementById('c-track');
+  if(!track) return;
+  var current = 0;
+  var cards = track.querySelectorAll('.c-card');
+  var total = cards.length;
+  var cardW = 202; // 190 + 12 gap
+
+  function go(n){
+    current = (n + total) % total;
+    track.style.transform = 'translateX(-' + (current * cardW) + 'px)';
+  }
+
+  document.getElementById('c-next').onclick = function(){ go(current + 1); resetAuto(); };
+  document.getElementById('c-prev').onclick = function(){ go(current - 1); resetAuto(); };
+
+  var timer = setInterval(function(){ go(current + 1); }, 3500);
+  function resetAuto(){ clearInterval(timer); timer = setInterval(function(){ go(current + 1); }, 3500); }
+
+  // Touch support
+  var sx;
+  track.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; });
+  track.addEventListener('touchend', function(e){
+    var dx = sx - e.changedTouches[0].clientX;
+    if(Math.abs(dx) > 40){ dx > 0 ? go(current+1) : go(current-1); resetAuto(); }
+  });
+})();
+</script>
 
 <!-- HERO -->
 <section class="hero">
