@@ -8,9 +8,24 @@
 <link rel="alternate" hreflang="en" href="https://smartbachao.com/fd-calculator-india"/>
 <link rel="alternate" hreflang="x-default" href="https://smartbachao.com/fd-calculator-india"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05JN2S9F7J');</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap&font-display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"></noscript>
+<style>body{font-family:'Sora',system-ui,sans-serif;}.hi{font-family:'Noto Sans Devanagari',system-ui,sans-serif;}</style>
+<script>
+// Deferred GA load for faster page speed
+window.addEventListener('load', function(){
+  var s=document.createElement('script');
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J';
+  s.async=true;
+  document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-05JN2S9F7J',{'send_page_view':true});
+  window.gtag=gtag;
+});
+</script>
 <style>
 :root{--forest:#1a4731;--forest-mid:#2d6a4f;--forest-light:#40916c;--cream:#fefdf8;--warm:#f8f4e8;--gold:#d4a017;--gold-light:#f0c040;--ink:#1c1c1e;--ink-mid:#3a3a3c;--muted:#6e6e73;--card:#ffffff;--border:rgba(26,71,49,0.12);--shadow:0 4px 20px rgba(26,71,49,0.08);--red:#dc2626;}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -210,22 +225,22 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
     <div class="calc-field">
       <label class="hi">Principal Amount (₹)</label>
       <label class="en" style="display:none">Principal Amount (₹)</label>
-      <input type="number" id="fd-amount" value="100000">
+      <input type="number" id="fd-amount" aria-label="fd-amount" value="100000">
     </div>
     <div class="calc-field">
       <label class="hi">Interest Rate (%/year)</label>
       <label class="en" style="display:none">Interest Rate (%/year)</label>
-      <input type="number" id="fd-rate" value="7.0" step="0.1">
+      <input type="number" id="fd-rate" aria-label="fd-rate" value="7.0" step="0.1">
     </div>
     <div class="calc-field">
       <label class="hi">Tenure (Years)</label>
       <label class="en" style="display:none">Tenure (Years)</label>
-      <input type="number" id="fd-years" value="3" min="1" max="10">
+      <input type="number" id="fd-years" aria-label="fd-years" value="3" min="1" max="10">
     </div>
     <div class="calc-field">
       <label class="hi">Compounding</label>
       <label class="en" style="display:none">Compounding</label>
-      <select id="fd-compound">
+      <select id="fd-compound" aria-label="fd-compound">
         <option value="4">Quarterly</option>
         <option value="12">Monthly</option>
         <option value="1">Annually</option>

@@ -4,10 +4,25 @@
 <title>आज का पेट्रोल भाव — Petrol Price Tracker India + Savings Calculator</title><meta name="description" content="Petrol price tracker India. Today's petrol and diesel prices in Delhi, Mumbai, Bangalore, Chennai. Plus fuel savings calculator and cheaper alternatives guide.">
 <link rel="canonical" href="https://smartbachao.com/petrol-price-tracker">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap&font-display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"></noscript>
+<style>body{font-family:'Sora',system-ui,sans-serif;}.hi{font-family:'Noto Sans Devanagari',system-ui,sans-serif;}</style>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05JN2S9F7J');</script>
+<script>
+// Deferred GA load for faster page speed
+window.addEventListener('load', function(){
+  var s=document.createElement('script');
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J';
+  s.async=true;
+  document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-05JN2S9F7J',{'send_page_view':true});
+  window.gtag=gtag;
+});
+</script>
 <style>
 :root{--forest:#1a4731;--forest-mid:#2d6a4f;--forest-light:#40916c;--cream:#fefdf8;--warm:#f8f4e8;--gold:#d4a017;--gold-light:#f0c040;--ink:#1c1c1e;--ink-mid:#3a3a3c;--muted:#6e6e73;--card:#ffffff;--border:rgba(26,71,49,0.12);}
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -156,9 +171,9 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 <h2 class="en" style="display:none">🧮 Your Monthly Fuel Budget Calculator</h2>
 <div class="calc-box">
 <div class="calc-input" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
-<div><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="hi">Petrol rate (₹/litre, उदाहरण)</label><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="en" style="display:none">Petrol rate (₹/litre, example)</label><input type="number" id="pt-rate" value="100" min="50" max="200" style="width:100%;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.15);color:white;font-family:Sora,sans-serif;font-size:0.9rem;outline:none;"></div>
-<div><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="hi">रोज की दूरी (km)</label><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="en" style="display:none">Daily distance (km)</label><input type="number" id="pt-dist" value="20" min="1" max="200" style="width:100%;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.15);color:white;font-family:Sora,sans-serif;font-size:0.9rem;outline:none;"></div>
-<div><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="hi">Mileage (km/litre)</label><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="en" style="display:none">Mileage (km/litre)</label><input type="number" id="pt-mil" value="45" min="15" max="80" style="width:100%;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.15);color:white;font-family:Sora,sans-serif;font-size:0.9rem;outline:none;"></div>
+<div><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="hi">Petrol rate (₹/litre, उदाहरण)</label><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="en" style="display:none">Petrol rate (₹/litre, example)</label><input type="number" id="pt-rate" aria-label="pt-rate" value="100" min="50" max="200" style="width:100%;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.15);color:white;font-family:Sora,sans-serif;font-size:0.9rem;outline:none;"></div>
+<div><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="hi">रोज की दूरी (km)</label><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="en" style="display:none">Daily distance (km)</label><input type="number" id="pt-dist" aria-label="pt-dist" value="20" min="1" max="200" style="width:100%;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.15);color:white;font-family:Sora,sans-serif;font-size:0.9rem;outline:none;"></div>
+<div><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="hi">Mileage (km/litre)</label><label style="font-size:12px;color:rgba(255,255,255,0.7);display:block;margin-bottom:4px;" class="en" style="display:none">Mileage (km/litre)</label><input type="number" id="pt-mil" aria-label="pt-mil" value="45" min="15" max="80" style="width:100%;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.15);color:white;font-family:Sora,sans-serif;font-size:0.9rem;outline:none;"></div>
 </div>
 <button class="calc-btn" style="margin-top:1rem;background:var(--gold-light);color:var(--forest);" onclick="calcPetrol()"><span class="hi">Calculate करें →</span><span class="en" style="display:none">Calculate →</span></button>
 <div class="calc-result" id="pt-result"></div>
@@ -195,17 +210,17 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
     <div>
       <label class="hi">रोज की दूरी (km)</label>
       <label class="en" style="display:none">Daily distance (km)</label>
-      <input type="number" id="p-dist" value="20">
+      <input type="number" id="p-dist" aria-label="p-dist" value="20">
     </div>
     <div>
       <label class="hi">Petrol rate (₹/litre — example)</label>
       <label class="en" style="display:none">Petrol rate (₹/litre — example)</label>
-      <input type="number" id="p-rate" value="105">
+      <input type="number" id="p-rate" aria-label="p-rate" value="105">
     </div>
     <div>
       <label class="hi">Mileage (km/litre)</label>
       <label class="en" style="display:none">Mileage (km/litre)</label>
-      <input type="number" id="p-mileage" value="45">
+      <input type="number" id="p-mileage" aria-label="p-mileage" value="45">
     </div>
   </div>
   <button class="calc-btn" onclick="calcFuel()">

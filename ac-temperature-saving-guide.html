@@ -7,9 +7,24 @@
 <link rel="alternate" hreflang="hi" href="https://smartbachao.com/ac-temperature-saving-guide"/>
 <link rel="alternate" hreflang="en" href="https://smartbachao.com/ac-temperature-saving-guide"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-05JN2S9F7J');</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap&font-display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"></noscript>
+<style>body{font-family:'Sora',system-ui,sans-serif;}.hi{font-family:'Noto Sans Devanagari',system-ui,sans-serif;}</style>
+<script>
+// Deferred GA load for faster page speed
+window.addEventListener('load', function(){
+  var s=document.createElement('script');
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J';
+  s.async=true;
+  document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-05JN2S9F7J',{'send_page_view':true});
+  window.gtag=gtag;
+});
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"AC Temperature 24 vs 26 vs 28 — Bijli Bill Difference India 2026","author":{"@type":"Organization","name":"SmartBachao Editorial Team"},"publisher":{"@type":"Organization","name":"SmartBachao","url":"https://smartbachao.com"},"dateModified":"2026-05-26","inLanguage":["hi","en"]}
 </script>
@@ -209,17 +224,17 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
     <div class="calc-field">
       <label class="hi">Current Setting (°C)</label>
       <label class="en" style="display:none">Current Setting (°C)</label>
-      <input type="number" id="temp-current" value="18" min="16" max="30">
+      <input type="number" id="temp-current" aria-label="temp-current" value="18" min="16" max="30">
     </div>
     <div class="calc-field">
       <label class="hi">Target Setting (°C)</label>
       <label class="en" style="display:none">Target Setting (°C)</label>
-      <input type="number" id="temp-target" value="24" min="16" max="30">
+      <input type="number" id="temp-target" aria-label="temp-target" value="24" min="16" max="30">
     </div>
     <div class="calc-field">
       <label class="hi">Monthly AC bill (₹ — example)</label>
       <label class="en" style="display:none">Monthly AC bill (₹ — example)</label>
-      <input type="number" id="temp-bill" value="3000" min="500">
+      <input type="number" id="temp-bill" aria-label="temp-bill" value="3000" min="500">
     </div>
   </div>
   <button class="calc-btn" onclick="calcTemp()">
