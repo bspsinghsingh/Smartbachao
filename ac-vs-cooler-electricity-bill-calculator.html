@@ -228,12 +228,63 @@ h1{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:800;line-height:1.25;margin-
 
 <div class="main">
 
+
+
+<div class="sec-label hi">🧮 Calculator — अपनी Monthly Cost जानें</div>
+<div class="sec-label en" style="display:none">🧮 Calculator — Know Your Monthly Cost</div>
+
+<div style="background:var(--warm);border-radius:10px;padding:1rem 1.2rem;margin:1rem 0;border:1px solid var(--border);">
+  <div style="font-size:11px;font-weight:700;color:var(--forest);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">📖 Calculator कैसे use करें</div>
+  <p style="font-size:0.82rem;color:var(--muted);margin:0;line-height:1.7;" class="hi">अपनी details भरें → Calculate बटन दबाएं → Result देखें। सभी amounts <strong>example figures</strong> हैं — actual results vary करती हैं।</p>
+  <p style="font-size:0.82rem;color:var(--muted);margin:0;line-height:1.7;" class="en" style="display:none">Fill in your details → press Calculate → see results. All amounts are <strong>example figures</strong> — actual results vary.</p>
+</div>
+<div class="calc-hero">
+  <h3 class="hi">AC vs Cooler vs Fan — Monthly Electricity Cost Calculator</h3>
+  <h3 class="en" style="display:none">AC vs Cooler vs Fan — Monthly Electricity Cost Calculator</h3>
+  <div class="calc-grid">
+    <div class="calc-field">
+      <label class="hi">रोज कितने घंटे चलाते हैं?</label>
+      <label class="en" style="display:none">Daily usage hours?</label>
+      <input type="number" id="hours" aria-label="hours" value="8" min="1" max="24">
+    </div>
+    <div class="calc-field">
+      <label class="hi">AC Tonnage</label>
+      <label class="en" style="display:none">AC Tonnage</label>
+      <select id="tonnage" aria-label="tonnage">
+        <option value="1.0">1 Ton</option>
+        <option value="1.5" selected>1.5 Ton</option>
+        <option value="2.0">2 Ton</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label class="hi">AC Star Rating</label>
+      <label class="en" style="display:none">AC Star Rating</label>
+      <select id="stars" aria-label="stars">
+        <option value="3">3 Star</option>
+        <option value="5" selected>5 Star Inverter</option>
+      </select>
+    </div>
+    <div class="calc-field">
+      <label class="hi">Electricity Rate (₹/unit — example)</label>
+      <label class="en" style="display:none">Electricity Rate (₹/unit — example)</label>
+      <input type="number" id="rate" aria-label="rate" value="8" min="4" max="15">
+    </div>
+  </div>
+  <button class="calc-btn" onclick="calcCooling()">
+    <span class="hi">Calculate करें →</span>
+    <span class="en" style="display:none">Calculate →</span>
+  </button>
+  <div class="calc-result" id="cooling-result"></div>
+</div>
+
+
 <!-- Quick Answer -->
 <div class="quick-answer">
   <div class="quick-answer-title">⚡ Quick Answer</div>
   <div class="quick-answer-text hi">AC चलाना cooler से काफी ज्यादा महंगा पड़ता है — लेकिन यह सिर्फ आधी बात है। <strong>Cooler सिर्फ dry climate में काम करता है।</strong> अगर आपकी city humid है तो cooler बेकार है। नीचे calculator से अपनी exact cost देखें।</div>
   <div class="quick-answer-text en" style="display:none">Running an AC is significantly more expensive than a cooler — but that's only half the story. <strong>A cooler only works in dry climates.</strong> If your city is humid, a cooler is useless. Use the calculator below to see your exact cost.</div>
 </div>
+
 
 <!-- Myth boxes -->
 <div class="sec-label hi">❌ सबसे बड़ा Myth — जो लोग गलत सोचते हैं</div>
@@ -262,6 +313,7 @@ h1{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:800;line-height:1.25;margin-
 </div>
 
 <!-- CALCULATOR -->
+
 <div class="sec-label hi">🧮 Calculator — अपनी Monthly Cost जानें</div>
 <div class="sec-label en" style="display:none">🧮 Calculator — Know Your Monthly Cost</div>
 
@@ -554,7 +606,7 @@ h1{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:800;line-height:1.25;margin-
   </div>
 </div>
 
-<div class="sec-label hi">Summer Electricity — और Guides</div>
+<div class="sec-label hi" loading="lazy">Summer Electricity — और Guides</div>
 <div class="sec-label en" style="display:none">Summer Electricity — More Guides</div>
 <div class="related">
   <a href="bijli-bill-kam-kare.html" class="rel-card"><div class="rel-icon">💡</div><div class="rel-title hi">Bijli Bill कम करें</div><div class="rel-title en" style="display:none">Reduce Electricity Bill</div></a>
@@ -575,6 +627,13 @@ h1{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:800;line-height:1.25;margin-
 
 <script>
 function calcCooling(){
+  // GA4 tracking
+  if(typeof gtag !== 'undefined'){
+    gtag('event', 'calculator_start', {
+      'event_category': 'Calculator',
+      'event_label': 'AC vs Cooler'
+    });
+  }
   const hours = parseFloat(document.getElementById('hours').value)||8;
   const tonnage = parseFloat(document.getElementById('tonnage').value)||1.5;
   const stars = parseInt(document.getElementById('stars').value)||3;
@@ -594,6 +653,7 @@ function calcCooling(){
   const lang = localStorage.getItem('sb-lang')||'hi';
   const r = document.getElementById('cooling-result');
   r.style.display = 'block';
+  try{gtag('event','calculator_result',{'event_category':'Calculator','event_label':'AC vs Cooler','value':Math.round(acCost)});}catch(e){}
 
   if(lang === 'hi'){
     r.innerHTML = `<strong>आपका Example Monthly Cost (${hours} hours/day पर):</strong><br>
@@ -617,6 +677,26 @@ function calcCooling(){
 function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.toLowerCase().startsWith('hi')?'hi':'en';}
 function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;if(lang==='hi'){document.querySelectorAll('.hi').forEach(el=>{el.style.display=el.tagName==='SPAN'||el.tagName==='A'?'inline':'block';});document.querySelectorAll('.en').forEach(el=>el.style.display='none');}else{document.querySelectorAll('.hi').forEach(el=>el.style.display='none');document.querySelectorAll('.en').forEach(el=>{el.style.display=el.tagName==='SPAN'||el.tagName==='A'?'inline':'block';});}document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
 function toggleFaq(el){const a=el.nextElementSibling;const isOpen=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.faq-q span:last-child').forEach(x=>x.textContent='+');if(!isOpen){a.classList.add('open');el.querySelector('span:last-child').textContent='−';}}
-document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
+document.addEventListener('DOMContentLoaded',()=>{
+  setLang(detectLang());
+  // GA4: calculator_view event
+  if(typeof gtag !== 'undefined'){
+    gtag('event', 'calculator_view', {
+      'event_category': 'Calculator',
+      'event_label': 'AC vs Cooler Page'
+    });
+  }
+  // GA4: calculator_start when user touches any input
+  document.querySelectorAll('#hours,#tonnage,#stars,#rate').forEach(function(el){
+    el.addEventListener('change', function(){
+      if(typeof gtag !== 'undefined'){
+        gtag('event', 'calculator_start', {
+          'event_category': 'Calculator',
+          'event_label': 'AC vs Cooler Input'
+        });
+      }
+    }, {once: true});
+  });
+});
 </script>
 </body></html>
