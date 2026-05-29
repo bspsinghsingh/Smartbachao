@@ -282,4 +282,34 @@ function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;cons
 function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;if(lang==='hi'){document.querySelectorAll('.hi').forEach(el=>{el.style.display=el.tagName==='SPAN'||el.tagName==='A'?'inline':'block';});document.querySelectorAll('.en').forEach(el=>el.style.display='none');}else{document.querySelectorAll('.hi').forEach(el=>el.style.display='none');document.querySelectorAll('.en').forEach(el=>{el.style.display=el.tagName==='SPAN'||el.tagName==='A'?'inline':'block';});}document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
 function toggleFaq(el){const a=el.nextElementSibling;const isOpen=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.faq-q span:last-child').forEach(x=>x.textContent='+');if(!isOpen){a.classList.add('open');el.querySelector('span:last-child').textContent='−';}}
 document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
-</script></body></html>
+</script>
+<script>
+// SmartBachao Event Tracking
+(function(){
+  // scroll_50 event
+  var scrollFired = false;
+  window.addEventListener('scroll', function(){
+    if(!scrollFired){
+      var scrollPct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      if(scrollPct >= 50){
+        scrollFired = true;
+        try{ gtag('event','scroll_50',{'event_category':'Engagement','event_label':document.title}); }catch(e){}
+      }
+    }
+  });
+
+  // time_15_sec event
+  setTimeout(function(){
+    try{ gtag('event','time_15_sec',{'event_category':'Engagement','event_label':document.title}); }catch(e){}
+  }, 15000);
+
+  // affiliate_click event — fires on any Amazon link click
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('a');
+    if(link && link.href && link.href.includes('amazon.in')){
+      try{ gtag('event','affiliate_click',{'event_category':'Affiliate','event_label':link.href.substring(0,100),'value':1}); }catch(e){}
+    }
+  });
+})();
+</script>
+</body></html>
