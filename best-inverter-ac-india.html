@@ -211,7 +211,7 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 
 <div class="author-box">
   <div style="font-size:1.8rem;flex-shrink:0;">✍️</div>
-  <div><p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin:0;" class="hi">Sources: OnDoorService May 2026, BestPickr March 2026, AC Bill Calculator April 2026, Air Conditioner Insights March 2026। Educational only।</p></div>
+  <div><p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin:0;" class="hi">Sources: OnDoorService May 2026, BestPickr March 2026, AC Bill Calculator April 2026, Air Conditioner Insights March 2026। Educational only।</p><p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin:0;display:none" class="en">Sources: OnDoorService May 2026, BestPickr March 2026, AC Bill Calculator April 2026, Air Conditioner Insights March 2026. Educational only.</p></div>
 </div>
 
 <div class="related">
@@ -230,7 +230,7 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 <script>
 
 function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.toLowerCase().startsWith('hi')?'hi':'en';}
-function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;if(lang==='hi'){document.querySelectorAll('.hi').forEach(el=>{el.style.display=el.tagName==='SPAN'?'inline':'block';});document.querySelectorAll('.en').forEach(el=>el.style.display='none');}else{document.querySelectorAll('.hi').forEach(el=>el.style.display='none');document.querySelectorAll('.en').forEach(el=>{el.style.display=el.tagName==='SPAN'?'inline':'block';});}document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
+function setLang(lang){localStorage.setItem('sb-lang',lang);document.documentElement.lang=lang;var show=function(el){var t=el.tagName;el.style.display=t==='SPAN'?'inline':(t==='TD'||t==='TH')?'table-cell':(t==='TR')?'table-row':'block';};if(lang==='hi'){document.querySelectorAll('.hi').forEach(show);document.querySelectorAll('.en').forEach(function(el){el.style.display='none';});}else{document.querySelectorAll('.hi').forEach(function(el){el.style.display='none';});document.querySelectorAll('.en').forEach(show);}document.getElementById('btn-hi').classList.toggle('active',lang==='hi');document.getElementById('btn-en').classList.toggle('active',lang==='en');}
 function toggleFaq(el){const a=el.nextElementSibling;const isOpen=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(x=>x.classList.remove('open'));if(!isOpen){a.classList.add('open');}}
 document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
 

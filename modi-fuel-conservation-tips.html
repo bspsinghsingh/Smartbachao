@@ -322,13 +322,13 @@ function setLang(lang){
   document.documentElement.lang=lang;
   if(lang==='hi'){
     document.querySelectorAll('.hi').forEach(el=>{
-      el.style.display = el.tagName==='SPAN'||el.tagName==='A' ? 'inline' : 'block';
+      el.style.display = el.tagName==='SPAN'||el.tagName==='A' ? 'inline' : (el.tagName==='TD'||el.tagName==='TH') ? 'table-cell' : (el.tagName==='TR') ? 'table-row' : 'block';
     });
     document.querySelectorAll('.en').forEach(el=>el.style.display='none');
   } else {
     document.querySelectorAll('.hi').forEach(el=>el.style.display='none');
     document.querySelectorAll('.en').forEach(el=>{
-      el.style.display = el.tagName==='SPAN'||el.tagName==='A' ? 'inline' : 'block';
+      el.style.display = el.tagName==='SPAN'||el.tagName==='A' ? 'inline' : (el.tagName==='TD'||el.tagName==='TH') ? 'table-cell' : (el.tagName==='TR') ? 'table-row' : 'block';
     });
   }
   document.getElementById('btn-hi').classList.toggle('active',lang==='hi');
