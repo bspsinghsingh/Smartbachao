@@ -22,7 +22,7 @@ window.addEventListener('load', function(){
   window.dataLayer=window.dataLayer||[];
   function gtag(){dataLayer.push(arguments);}
   gtag('js',new Date());
-  gtag('config','G-05JN2S9F7J',{'send_page_view':true});
+  gtag('config','G-05JN2S9F7J',{'send_page_view':true});gtag('config','AW-18196526544');
   window.gtag=gtag;
 });
 </script>
@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
   // affiliate_click event — fires on any Amazon link click
   document.addEventListener('click', function(e){
     var link = e.target.closest('a');
-    if(link && link.href && link.href.includes('amazon.in')){
+    if(link && link.href && (link.href.includes('amazon.in')||link.href.includes('amzn.to'))){
       try{ gtag('event','affiliate_click',{'event_category':'Affiliate','event_label':link.href.substring(0,100),'value':1}); }catch(e){}
     }
   });

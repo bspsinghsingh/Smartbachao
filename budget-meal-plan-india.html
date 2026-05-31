@@ -10,7 +10,7 @@
 <style>body{font-family:'Sora',system-ui,sans-serif;}.hi{font-family:'Noto Sans Devanagari',system-ui,sans-serif;}</style>
 <!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-05JN2S9F7J"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-05JN2S9F7J");</script><style>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-05JN2S9F7J");gtag("config","AW-18196526544");</script><style>
 :root{--forest:#1a4731;--forest-mid:#2d6a4f;--forest-light:#40916c;--cream:#fefdf8;--warm:#f8f4e8;--gold:#d4a017;--gold-light:#f0c040;--ink:#1c1c1e;--ink-mid:#3a3a3c;--muted:#6e6e73;--card:#ffffff;--border:rgba(26,71,49,0.12);}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--cream);color:var(--ink);font-family:'Sora',sans-serif;}
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
   // affiliate_click event — fires on any Amazon link click
   document.addEventListener('click', function(e){
     var link = e.target.closest('a');
-    if(link && link.href && link.href.includes('amazon.in')){
+    if(link && link.href && (link.href.includes('amazon.in')||link.href.includes('amzn.to'))){
       try{ gtag('event','affiliate_click',{'event_category':'Affiliate','event_label':link.href.substring(0,100),'value':1}); }catch(e){}
     }
   });
