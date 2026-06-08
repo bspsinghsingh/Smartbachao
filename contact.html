@@ -73,10 +73,10 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 <div class="lang-bar"><span class="lang-label">भाषा:</span>
 <button class="lang-btn active" onclick="setLang('hi')" id="btn-hi">हिंदी</button>
 <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button></div>
-<nav><a href="index.html" class="logo"><div class="logo-icon">💡</div><span class="logo-text">Smart<span>Bachao</span></span></a>
-<a href="index.html" class="nav-back">← <span class="hi">होम</span><span class="en" style="display:none">Home</span></a></nav>
+<nav><a href="/" class="logo"><div class="logo-icon">💡</div><span class="logo-text">Smart<span>Bachao</span></span></a>
+<a href="/" class="nav-back">← <span class="hi">होम</span><span class="en" style="display:none">Home</span></a></nav>
 <div class="page-hero">
-<div class="breadcrumb"><a href="index.html">SmartBachao</a> → <span class="hi">हमसे संपर्क करें</span><span class="en" style="display:none">Contact Us</span></div>
+<div class="breadcrumb"><a href="/">SmartBachao</a> → <span class="hi">हमसे संपर्क करें</span><span class="en" style="display:none">Contact Us</span></div>
 <h1>📬 <span class="hi">हमसे संपर्क करें</span><span class="en" style="display:none">Contact Us</span></h1>
 <div style="margin-top:0.6rem;display:flex;gap:8px;flex-wrap:wrap;">
 <span style="font-size:11px;background:rgba(26,71,49,0.08);color:#2d6a4f;padding:3px 10px;border-radius:20px;font-weight:600;border:1px solid rgba(26,71,49,0.15);">🗓 Last Updated: May 2026</span>
@@ -99,12 +99,12 @@ footer a{color:var(--gold-light);text-decoration:none;margin:0 0.5rem;}
 </div>
 <script>function doSubmit(){{const n=document.getElementById('cname').value;const e=document.getElementById('cemail').value;const m=document.getElementById('cmsg').value;if(!n||!e||!m){{alert('Please fill all fields.');return;}}document.getElementById('csuccess').style.display='block';}}</script>
 <div class="related">
-<a href="about.html" class="rel-card"><div class="rel-icon">ℹ️</div><div class="rel-title">About Us</div></a>
-<a href="privacy-policy.html" class="rel-card"><div class="rel-icon">🔒</div><div class="rel-title">Privacy Policy</div></a>
-<a href="index.html" class="rel-card"><div class="rel-icon">🏠</div><div class="rel-title">Home</div></a>
-<a href="bijli-bill-kam-kare.html" class="rel-card"><div class="rel-icon">💡</div><div class="rel-title">Bijli Guide</div></a>
+<a href="about" class="rel-card"><div class="rel-icon">ℹ️</div><div class="rel-title">About Us</div></a>
+<a href="privacy-policy" class="rel-card"><div class="rel-icon">🔒</div><div class="rel-title">Privacy Policy</div></a>
+<a href="/" class="rel-card"><div class="rel-icon">🏠</div><div class="rel-title">Home</div></a>
+<a href="bijli-bill-kam-kare" class="rel-card"><div class="rel-icon">💡</div><div class="rel-title">Bijli Guide</div></a>
 </div></div>
-<footer><p><a href="index.html">SmartBachao</a> · <a href="about.html">About</a> · <a href="privacy-policy.html">Privacy</a> · <a href="contact.html">Contact</a></p>
+<footer><p><a href="/">SmartBachao</a> · <a href="about">About</a> · <a href="privacy-policy">Privacy</a> · <a href="contact">Contact</a></p>
 <p style="margin-top:8px;">© 2026 SmartBachao.com</p></footer>
 <script>
 function detectLang(){const s=localStorage.getItem('sb-lang');if(s)return s;const b=navigator.language||'hi';return b.toLowerCase().startsWith('hi')?'hi':'en';}
